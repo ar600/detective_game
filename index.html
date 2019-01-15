@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Who Killed Kenny by Ali Rashidian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+</head>
+
+<body>
+
+    <section class="title">
+        <h1>Who Killed Kenny?</h1>
+        <h4>Here are the suspects. Your job is to sort them from who you think is the most likely to the least likely,
+            by clicking on the suspect.</h4>
+    </section>
+
+    <main class="wrap" id="wrap">
+        <div class="gallery" id="gallery">
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-1" id="img-1">
+                <figcaption class="gallery__caption gallery__caption--1">Stan</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-2" id="img-2">
+                <figcaption class="gallery__caption gallery__caption--2">Kyle</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-3" id="img-3">
+                <figcaption class="gallery__caption gallery__caption--3">Kenny</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-4" id="img-4">
+                <figcaption class="gallery__caption gallery__caption--4">Cartman</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-5" id="img-5">
+                <figcaption class="gallery__caption gallery__caption--5">Wendy</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-6" id="img-6">
+                <figcaption class="gallery__caption gallery__caption--6">Ike</figcaption>
+            </figure>
+            <figure class="gallery__img " onclick="reSort(this)">
+                <img class="gallery__img-7" id="img-7">
+                <figcaption class="gallery__caption gallery__caption--7">Tweak</figcaption>
+            </figure>
+            <!-- <img onclick="reSort(this)" class="gallery__img gallery__img-2" id="img-2">
+                    <div class="gallery__caption">Kyle</div>
+                    <img onclick="reSort(this)" class="gallery__img gallery__img-3" id="img-3">
+                    <div class="gallery__caption">Kenny</div>
+                    <img onclick="reSort(this)" class="gallery__img gallery__img-4" id="img-4">
+                    <div class="gallery__caption">Cartman</div>
+                    <img onclick="reSort(this)" class="gallery__img gallery__img-5" id="img-5">
+                    <div class="gallery__caption">Wendy</div>
+                    <img onclick="reSort(this)" class="gallery__img gallery__img-6" id="img-6">
+                    <div class="gallery__caption">Ike</div>
+                    <img onclick="reSort(this)" class="gallery__img gallery__img-7" id="img-7"> -->
+            <!-- <div class="gallery__caption">Tweak</div> -->
+        </div>
+
+        <section class="gallery" id="sorted__images"></section>
+
+        <section class="buttons">
+            <button class="btn btn-reset">Reset</button>
+            <button class="btn btn-save">Save</button>
+        </section>
+    </main>
+
+
+    <footer>
+        <p class="footer__copyright">
+             &copy; 2019 <a href="mailto:alex.80.ra@gmail.com" class="footer__link"><b>Ali Rashidian</a>.
+        </p>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
