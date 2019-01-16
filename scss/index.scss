@@ -1,3 +1,4 @@
+// reset style
 *,
 *::before,
 *::after {
@@ -7,51 +8,37 @@
     box-sizing: inherit;
 }
 
-html {
-    /* defines what 1rem is*/
-    font-size: 62.5%;
-    /*   10px/16px = 62.5%      */
-
-}
+/* defines what 1rem is : 10px/16px = 62.5%*/
+html { font-size: 62.5%; }
 
 body {
     box-sizing: border-box;
     background-color: rgb(0, 0, 0);
-    font-family: Lato;
+    font-family: 'lato';
     font-weight: 300;
     position: relative;
     height: 100vh;
     color: rgb(255, 255, 255);
     padding: 2rem;
 
-    .gallery~.gallery {
-        // removing the extra border from gallery
-        border-bottom: none;
-    }
+    // removing the extra border from gallery
+    .gallery~.gallery { border-bottom: none; }
 }
 
-h1 {
+header {
     font-weight: 800;
-    font-size: 3rem;
-}
-
-h4 {
-    font-size: 1.5rem;
+    
+    h1 { font-size: 3rem; }
+    h4 { font-size: 1.5rem; }
 }
 
 .wrap {
-    width: 53vw;
+    width: 60vw;
     margin: 0 auto;
-
-    &:hover .gallery>*:not(:hover) {
-        filter: brightness(40%); // less than 100% darker, more than 100% lighter
-    }
 }
 
 .gallery {
     display: flex;
-    max-width: 97%;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 2rem 0;
     border-bottom: 2px solid rgb(255, 255, 255);
@@ -59,80 +46,71 @@ h4 {
     &__caption {
         color: rgb(0, 0, 0);
         font-weight: 700;
+        font-size: 1.4rem;
         text-align: center;
-        // background-color: #fff;
         position: absolute;
-        bottom: -2px;
+        bottom: -7px;
         transform: translate(-50%, -50%);
         left: 50%;
     }
 
     &__img {
-        flex: 0 1 10rem;
-        height: 15.5rem;
+        flex: 0 0 10.6rem;
+        height: 17.5rem;
         border: 1px solid #eee;
-        // background: url('../images/characters-sprite.png');
         position: relative;
+        background-color: #fff;
+        margin-bottom: 4px;
 
-        &:not(:first-child) {
-            margin-left: 1rem;
-        }
+        &:not(:first-child) { margin-left: 1rem; }
+
+        &:hover { cursor: pointer; }
 
         &-1 {
             width: 100%;
             height: 100%;
-            background: url('../images/characters-sprite.png') -1px -1px;
-            // background-position: -1px -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') 2px 5px no-repeat;
         }
 
         &-2 {
             width: 100%;
             height: 100%;
-            background-position: -10.6rem -1px;
-            background: url('../images/characters-sprite.png') -20.8rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -20.5rem 5px no-repeat;
         }
 
         &-3 {
             width: 100%;
             height: 100%;
-            background-position: -20.8rem -1px;
-            background: url('../images/characters-sprite.png') -62rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -61.7rem 5px no-repeat;
         }
 
         &-4 {
             width: 100%;
             height: 100%;
-            background-position: -31.1rem -1px;
-            background: url('../images/characters-sprite.png') -31.1rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -30.8rem 5px no-repeat;
         }
 
         &-5 {
             width: 100%;
             height: 100%;
-            background-position: -41.4rem -1px;
-            background: url('../images/characters-sprite.png') -41.4rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -41.2rem 5px no-repeat;
         }
 
         &-6 {
             width: 100%;
             height: 100%;
-            background-position: -51.8rem -1px;
-            background: url('../images/characters-sprite.png') -51.8rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -51.5rem 5px no-repeat;
         }
 
         &-7 {
             width: 100%;
             height: 100%;
-            background-position: -62rem -1px;
-            background: url('../images/characters-sprite.png') -10.6rem -1px;
-            background-repeat: no-repeat;
+            background: url('../images/characters-sprite.png') -10.3rem 5px no-repeat;
         }
+    }
+
+    &:hover &__img:not(:hover) {
+        filter: brightness(40%); // less than 100% darker, more than 100% lighter
     }
 }
 
@@ -148,7 +126,7 @@ h4 {
     .btn:active,
     .btn:focus {
         outline: none;
-        font-weight: 500;
+        font-weight: 900;
         font-family: 'lato';
         background-color: #fff;
         border: 1px solid rgb(209, 209, 209);

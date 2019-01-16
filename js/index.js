@@ -1,17 +1,12 @@
+"use strict"
+// cloning a copy of the gallery tree nodes to reset later
 let orgClone = document.getElementById('gallery').cloneNode(true);
-// let orgClone = document.body.innerHTML;
-
-// let srtClone = document.getElementById('sorted__images').cloneNode(true);
-// let images = document.images;
-// console.log(images);
-
 
 function reSort(img) {
     document.getElementById('sorted__images').appendChild(img); // adding to the lower section to resort the new suspects
 }
 
 document.querySelector('.btn-reset').addEventListener('click', () => {
-
     // resetting the upper section to its initial state 
     document.getElementById('wrap').replaceChild(orgClone, document.getElementById('gallery'));
     orgClone = orgClone.cloneNode(true);
@@ -21,5 +16,4 @@ document.querySelector('.btn-reset').addEventListener('click', () => {
     while (srtParent.firstChild) {
         srtParent.removeChild(srtParent.firstChild);
     }
-
 })
