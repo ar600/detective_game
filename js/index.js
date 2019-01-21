@@ -13,7 +13,8 @@ document.querySelector('.btn-reset').addEventListener('click', () => {
 
     // removing the lower section sorted children from the DOM
     let srtParent = document.getElementById('sorted__images');
-    while (srtParent.firstChild) {
-        srtParent.removeChild(srtParent.firstChild);
-    }
+    // while (srtParent.firstChild) {
+    //     srtParent.removeChild(srtParent.firstChild);
+    // }
+    srtParent.innerHTML = "";
 })
